@@ -53,13 +53,26 @@ npm run build
 npx cap sync
 ```
 
-### 2. Build Signed APK (in Android Studio)
+### 2. Build Signed APK (Automated - Recommended)
+The project is set up to build the APK automatically on GitHub. You just need to add the following **Secrets** to your GitHub repository (**Settings > Secrets and variables > Actions**):
+
+| Secret Name | Description |
+| :--- | :--- |
+| `ANDROID_KEYSTORE_BASE64` | The Base64 encoded string of your `.jks` file. |
+| `ANDROID_KEY_ALIAS` | `sunoarch` |
+| `ANDROID_KEYSTORE_PASSWORD` | `Iris6102009!#` |
+| `ANDROID_KEY_PASSWORD` | `Iris6102009!#` |
+
+Once added, every push to `main` will generate a signed APK in the **Actions** tab of your GitHub repo.
+
+### 3. Build Signed APK (Manual - Android Studio)
 1.  Open **Android Studio**.
 2.  Open the `android` folder in this project.
 3.  Go to **Build** > **Generate Signed Bundle / APK...**
 4.  Select **APK** -> **Next**.
-5.  Create/Use a keystore and select the **release** variant.
-6.  The signed APK will be located at: `android/app/release/app-release.apk`
+5.  Choose the existing keystore at `android/app/sunoarch.jks`.
+6.  Enter the password `Iris6102009!#` and select the **release** variant.
+7.  The signed APK will be located at: `android/app/release/app-release.apk`
 
 ### 🎨 App Assets
 *   **Icon:** `resources/icon-only.png`
