@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Suno Architect</string>
+    <string name="title_activity_main">Suno Architect</string>
+    <string name="package_name">com.drfendiameen.sunoarch</string>
+    <string name="custom_url_scheme">com.drfendiameen.sunoarch</string>
+</resources>
