@@ -1,4 +1,4 @@
-import os
+﻿import os
 import ftplib
 import sys
 from pathlib import Path
@@ -36,7 +36,7 @@ def upload_directory(ftp, local_path, base_remote_path):
         print(f"Error: {local_path} does not exist. Please run 'npm run build' first.")
         sys.exit(1)
 
-    print(f"🚀 Starting deployment to {FTP_HOST}...")
+    print(f"ðŸš€ Starting deployment to {FTP_HOST}...")
     
     # Ensure remote base directory exists
     if base_remote_path != "/":
@@ -83,15 +83,15 @@ try:
     ftp = ftplib.FTP_TLS(FTP_HOST)
     ftp.login(FTP_USER, FTP_PASS)
     ftp.prot_p() # Secure data connection
-    print("✅ Login successful!")
+    print("âœ… Login successful!")
 
     # Upload the dist folder
     upload_directory(ftp, LOCAL_DIR, REMOTE_DIR)
 
     ftp.quit()
-    print("\n🎉 Deployment Completed Successfully!")
+    print("\nðŸŽ‰ Deployment Completed Successfully!")
 
 except ftplib.all_errors as e:
-    print(f"\n❌ FTP Error: {e}")
+    print(f"\nâŒ FTP Error: {e}")
 except Exception as e:
-    print(f"\n❌ Unexpected error: {e}")
+    print(f"\nâŒ Unexpected error: {e}")
