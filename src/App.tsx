@@ -491,6 +491,8 @@ export default function App() {
           <span className="text-[9px] text-indigo-900/50 font-bold uppercase tracking-widest">MODEL: SUNO V3.5 OPTIMIZED</span>
         </div>
         <div className="flex gap-4">
+          <span className="text-[9px] text-slate-700 font-bold uppercase tracking-widest">Creator: drfendiameen</span>
+          <span className="text-[10px] text-slate-800">|</span>
           <span className="text-[9px] text-slate-700 font-bold uppercase tracking-widest">Iteration Loop: Finalized</span>
         </div>
       </footer>
